@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>short-rant</title>
+<link rel=stylesheet href="styles/lagom.css">
+
+<header> ◩ | @reimertz</header>
+
+<style type="text/css">
+  *[invert] {
+    filter: invert(1);
+
+  }
+
+  body {
+    background: black;
+  }
+  body, .slide, section {
+    transition: none !important;
+  }
+  body:after {
+    font-size: 0;
+  }
+
+  *[no-bg] {
+    background: transparent;
+  }
+
+  *[white] {
+    background: white;
+  }
+
+  *[green] {
+    background: #1BFF90;
+  }
+
+  *[orange] {
+    background: orange;
+  }
+
+  *[red] {
+    background: red;
+    color: white;
+  }
+
+  body section {
+
+    transition: none !important;
+  }
+
+  sup {
+    font-size: 4rem;
+  }
+
+  big big img[contain] {
+    object-fit: contain;
+  }
+</style>
+
+<section invert>
+  <right>
+    <h1>A Rant</h1>    
+    <!-- <marquee  invert scrollamount="10" width="100%"  height="200" direction="right" style="left: 0;" onmouseenter="this.stop()" onmouseleave="this.start()"> -->
+    <marquee  invert scrollamount="10"  width="100%"  height="200" direction="left">
+        <img src="shake-1.gif" style="height: 20px" />
+        <img src="mirror.gif" style="height: 20px" />
+        <img src="shake-2.webp" style="height: 20px" />
+        <img src="shake-3.webp" style="height: 20px" />
+    </marquee>
+    <h1>on Social Platforms</h1>
+  </right>
+</section>
+
+<section>
+  <big>
+    <big>
+      <img style="filter: invert(1)" src="reimertz.gif">
+    </big>
+  </big>
+    <right>
+      <h4>developer, designer, artist.</h4> 
+      <h1>Piérre Reimertz</h1> 
+      <h3>maybe advocate? <span id="emoji">🤔</span></h3>
+      <script type="text/javascript">
+        setInterval(() => {
+          window.emoji.innerHTML = window.emoji.innerHTML === '😂' ? '🤔' : '😂';
+        }, 1000)
+      </script>
+    </right>
+</section>
+
+<section white>
+  <right>
+    <h1>The History</h1>    
+    <!-- <marquee  invert scrollamount="10" width="100%"  height="200" direction="right" style="left: 0;" onmouseenter="this.stop()" onmouseleave="this.start()"> -->
+    <marquee  scrollamount="20" width="100%"  height="200" direction="left">
+      <img src="cat-1.webp" style="height: 20px" />
+      <img src="cat-reading.gif" style="height: 20px" />
+      <img src="vmimgs24.gif" style="height: 20px" />
+    </marquee>
+    <h1>Behind Social Platforms</h1>
+  </right>
+</section>
+
+<section >
+  <big><big>
+    <img id="timetravelImg" style="opacity: 0;" src="200w.webp">
+  </big></big>
+  <h4 id="timetravel"></h4>
+  <h2 id="timetravelButton" style="cursor: pointer;"> Time Travel</h2>
+  
+  <script type="text/javascript">
+    window.doTimeTravel = (newAge = 2018) => {
+
+      if (newAge < -4600000000)  {
+        timetravelImg.style.opacity = 0;
+        timetravelButton.innerHTML = 'Arrived.';
+        timetravelButton.style.backgroundColor = '#1BFF90';
+        timetravelButton.style.color = 'white';
+
+        return timetravel.innerHTML = '4.6 billion years ago'
+      }
+      else {
+        if (newAge < -1000000000) {
+          timetravel.innerHTML = `${Math.floor(Math.abs(newAge/1000000000))} billion years ago`;  
+        }
+        else if (newAge < -1000000) {
+          timetravel.innerHTML = `${Math.floor(Math.abs(newAge/1000000))} million years ago`;  
+        }
+        else {
+          const pre = newAge < 0 ? 'B.C' : 'A.D'
+        
+          timetravel.innerHTML = `${pre} ${Math.floor(Math.abs(newAge)).toLocaleString('SE')}`;  
+        }
+        console.log(newAge)
+        timetravelButton.innerHTML = `Travelling...`;
+        setTimeout(() => window.doTimeTravel(newAge - 1 - ((2018 - newAge)/25)), Math.max(0, 100 - (2018 - newAge)))  
+      }
+    }
+
+    timetravelButton.addEventListener('click',     (event) => {
+      timetravelButton.removeEventListener('click', event)
+
+      timetravelButton.innerHTML = 'Travelling';
+      timetravelImg.style.opacity = 1;
+      window.doTimeTravel()
+    })
+    </script>
+</section>
+
+
+<section white top>
+  <h4 >4.6 billion years ago</h4>
+  <h2>Single-celled organisms</h2>
+  <big>
+    <big>
+      <img src="nikon_small_world_ciliate.0.0.gif">
+    </big>
+  </big>
+</section>
+
+<section white top>
+  <h4 >1.5 billion years ago</h4>
+  <h2>Multi-cellular organisms</h2>
+  <big>
+    <big>
+      <video autoplay loop style="transform: scale(1.5)">
+        <source src="ConcreteCornyHairstreak.webm" type="">
+      </video>
+    </big>
+  </big>
+</section>
+
+<section top >
+  <h4>250 million years ago</h4>
+  <h3>Socially complex herds</h3>
+  <marquee  scrollamount="10" width="700"  height="200" direction="left">
+    <h1 no-bg>🦕🦕🦕🦕 🦖</h1>
+  </marquee>
+  
+  <!-- 
+    Travelled Together
+    Herding
+    "Socially complex" herds
+   -->
+</section>
+
+<section white top>
+  <h4 >45 million years ago</h4>
+  <h3>Altruism</h3>
+  <h1>
+    🐿🐿<span style="cursor: crosshair;" onmousedown="this.innerHTML='‼️'" onmouseup="this.innerHTML='💥'">🐿</span>🦅
+  </h1>
+  <h1>
+    <span style="cursor: crosshair;" onmousedown="this.innerHTML='🐿🐿💤'" onmouseup="this.innerHTML='💥💥💥'">🐿🐿🐿</span>
+    🦅</h1>
+  </h1>
+</section>
+
+<section white top>
+  <h4>35 million years ago</h4>
+  <h2>Unicorns</h2>
+  <h1 style="cursor: crosshair;" onmousedown="this.innerHTML='💥'" onmouseup="this.innerHTML='💀'">🦄</h1>
+</section>
+
+<section white top>
+  <h4 >30 million years ago</h4>
+  <h2>Monkeys 'n Apes</h2>
+  <h1>🦍 🐒 🦍 🐒</h1>
+</section>
+
+<section white top>
+  <h4 >30 million years ago</h4>
+  <h2>Fear Grin</h2>
+  <h1 style="cursor: crosshair;" 
+    onmouseenter="this.innerHTML='🙊🐅'" 
+    onmousedown="this.innerHTML='🐵🐅<sup ><small>ok, we cool</small></sup>'" 
+    onmouseup="this.innerHTML='🙊🐅'"
+    onmouseleave="this.innerHTML='🐒'" 
+    >🐒</h1>
+</section>
+
+<section bottom>
+  <h2>Why does this matter?</h2>
+  <big><big>
+    <img src="evolution.webp">
+  </big></big>
+</section>
+
+<section bottom left>
+  <big>
+    <big>
+      <img src="8dIxpWE.gif">
+    </big>
+  </big>
+  <left>
+    <h4 invert>300 000 years ago</h4>
+    <h2 invert>Facial Expressions</h2>
+  </left>
+</section>
+
+<section bottom left>
+  <big>
+    <big>
+      <img src="martin-luther-king-jr---mini-biography.jpg">
+    </big>
+  </big>
+  <left>
+    <h4 invert>100 000 years ago</h4>
+    <h2 invert>Speech</h2>
+  </left>
+  
+</section>
+
+<section left bottom>
+  <big>
+    <big>
+      <video style="opacity: 0.8;filter: transform: scale(1.5);" onmousedown="this.play()">
+        <source src="first_city.mp4" type="video/mp4">
+      </video>
+    </big>
+  </big>
+  <left>
+    <h4 invert>5000 years ago</h4>
+    <h2 invert>Cradle of civilization</h2>
+  </left>
+</section>
+
+<section left bottom >
+  <big>
+    <big>
+      <video style="opacity: 0.8;filter: transform: scale(1.5);" onmousedown="this.play()">
+        <source src="first_city.mp4#t=60" type="video/mp4">
+      </video>
+    </big>
+  </big>
+  <left >
+    <h4 invert>5000 years ago</h4>
+    <h2 invert>Civilization</h2>
+    <h4>Social Contracts</h4>
+    <h4>Empathy</h4>
+    <h4>Common gathering areas</h4>
+    <h4>Festivities</h4>
+  </left>
+</section>
+
+<section right white bottom>
+  <big>
+    <big>
+      <img src="1_Px4gl3BS5og1E34CneMPtQ.gif">
+    </big>
+  </big>
+  <right invert>
+    <h4 invert>~50 years ago</h4>
+    <h2 invert>Mother of all Demos.</h2>
+    <h4>Birth of the modern computer</h4>
+    <h4>Xerox Alto</h4>
+    <h4>Apple</h4>
+    <h4>Douglas Engelbart <span invert>❤️</span></h4>
+  </right>
+</section>
+
+<section right white bottom>
+  <big>
+    <big>
+    <iframe src="https://www.cameronsworld.net/" style="opacity: 1;width: 100vw; height: 100vh;position: absolute; left: 0; top: 0;"></iframe>    
+    </big>
+  </big>
+  <right invert>
+    <h4 invert>~30 years ago</h4>
+    <h2 invert>The WWW.</h2>
+    <h4>Instant</h4>
+    <h4>Open</h4>
+    <h4>Free</h4>
+    <h4>Tim Berners-Lee<span invert>❤️</span></h4>
+  </right>
+</section>
+
+<section left top green>
+  <big>
+    <big>
+      <img contain src="icq24.gif">
+    </big>
+  </big>
+  <left >
+    <h4 invert>Instant Messaging</h4>
+    <h4>Utility</h4>
+    <h4>No Real User Profile</h4>
+    <h2 invert>ICQ</h2>
+  </left>
+</section>
+
+<section top white>
+  
+  <big>
+    <img src="it-kommissionen-lunarstorm-pres-25-nov-02-1-728.jpg">
+  </big>
+</section>
+
+<section bottom white>
+  <big>
+    <big>
+      <img src="skarmavbild_2016-01-05_kl._16.20.05.png">
+    </big>
+  </big>
+</section>
+
+<section bottom white>
+  <h2 red>Profile Score</h2>
+  <big>
+    <big>
+      <img src="skarmavbild_2016-01-05_kl._16.20.05.png">
+    </big>
+  </big>
+</section>
+
+<section bottom white>
+  <h2 red>Overly Incentivized Usage</h2>
+  <big>
+    <big>
+      <img contain src="Lunar5-1024x527.jpg">  
+    </big>
+  </big>
+</section>
+
+<section bottom white>
+  <big>
+    <img contain src="62.jpg" >
+  </big>
+  <h2 red>Pay to win</h2>
+</section>
+
+<section left top>
+  <left >
+    <h2 invert>LunarStorm 2001</h2>
+    <h3 invert>MySpace 2003</h3>
+    <h4 invert>Facebook 2004</h4>
+    <h4 invert>Twitter 2006</h4>
+  </left>
+</section>
+
+<section>
+  <big>
+    <big>
+      <img src="shake-1.gif" style="opacity: 0.5;" />
+    </big>
+  </big>
+  <h2 no-bg invert>Swedish Millenials took a time machine to 2010 without knowing it.</h2>
+</section>
+
+<section>
+  <img  src="facebook_chill.png">
+</section>
+
+<section left top green>
+  <left >
+    <h3 invert>Facebook ~2005</h3>
+    <h4>Free</h4>
+    <h4>Utility</h4>
+    <h4>User Profile</h4>
+    <h4>Friends used it</h4>
+    <h4>No Infinite Scrolling</h4>
+    <h4>No Ads</h4>
+  </left>
+</section>
+<!-- 
+<section right center orange>
+  <right>
+    <h3 invert>Facebook ~2018</h3>
+    <div style="max-height: 500px; overflow: scroll;">
+    <h4 red>Tracking Widgets</h4>
+    <h4 red>Targeted Advertising</h4>
+    <h4 red>GPS Location</h4>
+    <h4 red>Facial Recognition</h4>
+    <h4 red>Data Mining</h4>
+    <h4 red>Pull to Refresh</h4>
+    <h4 red>Infinite Scrolling</h4>
+    <h4 red>The Number of Things</h4>
+    </div>  
+  </right>
+</section>
+ -->
+<section center orange>
+  <left>
+    <h2 no-bg invert>Facebook ≠ Free </h2>
+  </left>
+</section>
+
+<section left bottom red>
+  </big></big>
+  <left >
+    <h4 red>Tracking Widgets</h4>
+    <h4 red>Targeted Advertising</h4>
+    <h4 red>GPS Location</h4>
+    <h4 red>Facial Recognition</h4>
+    <h1 red>Privacy</h1>
+  </right>
+</section>s
+
+<section left bottom red>
+  <big><big>
+      <video loop onmousedown="this.play()" onmouseup="this.pause()">
+      <source src="addiction_2.mp4" type="video/mp4">
+    </video>
+  </big></big>
+  <left >
+    <h4 red>Pull to Refresh</h4>
+    <h4 red>Infinite Scrolling</h4>
+    <h4 red># of Likes, # of Friends</h4>
+    <h1 red>Addictive</h1>
+  </right>
+</section>
+
+<!-- <section center red>
+  <h1 red>160km</h1>
+</section>
+
+<section left top red>
+  <left >
+    <h1 red>365 days * 440 meters <br>= 160km</h1>
+  </right>
+</section>
+
+<section red>
+  <right>
+    <marquee   scrollamount="5" width="100%"  height="150" direction="left" behavior="alternate">
+        <img src="https://media.giphy.com/media/Q1f67jiVj94Sk/giphy.gif" style="height: 20px" />
+        <img src="https://media.giphy.com/media/Q1f67jiVj94Sk/giphy.gif" style="height: 20px" />
+    </marquee>
+    <marquee   scrollamount="5" width="100%"  height="150" direction="right" behavior="alternate">
+        <img src="https://media.giphy.com/media/Q1f67jiVj94Sk/giphy.gif" style="height: 20px" />
+        <img src="https://media.giphy.com/media/Q1f67jiVj94Sk/giphy.gif" style="height: 20px" />
+    </marquee>
+    <marquee   scrollamount="5" width="100%"  height="150" direction="left" behavior="alternate">
+        <img src="https://media.giphy.com/media/Q1f67jiVj94Sk/giphy.gif" style="height: 20px" />
+        <img src="https://media.giphy.com/media/Q1f67jiVj94Sk/giphy.gif" style="height: 20px" />
+    </marquee>
+    <marquee   scrollamount="5" width="100%"  height="150" direction="right" behavior="alternate">
+        <img src="https://media.giphy.com/media/Q1f67jiVj94Sk/giphy.gif" style="height: 20px" />
+        <img src="https://media.giphy.com/media/Q1f67jiVj94Sk/giphy.gif" style="height: 20px" />
+    </marquee>
+  </right>
+</section> -->
+
+<section left bottom red>
+  <big><big>
+    <video loop onmousedown="this.play()" onmouseup="this.pause()">
+      <source src="mental_health_2.mp4" type="video/mp4">
+    </video>
+  </big></big>
+  <left >
+    
+    <h4 red>Unreachable standards</h4>
+    <h4 red>Skewed World View</h4>
+    <h1 red>Mental Health</h1>
+  </right>
+
+  <!-- Feedback loop that erodes our Self Esteem and Mental Health -->
+</section>
+
+<section center  red>
+  <h1 red>A negative feedback loop that erodes our inner self</h1>
+</section>
+
+<section center  red>
+  <h4 red>Depression in United States <br>correlated to Facebook Revenue since 2009</h4>
+  <big><big>
+    <img contain src="chart_depression.png" >
+  </big></big>
+</section>
+
+<section left bottom red>
+  <big><big>
+    <big><big>
+    <img src="FragrantSickAmethystinepython-max-1mb.gif" style="opacity: 0.55;filter: hue-rotate(270deg);" >
+  </big></big>
+  </big></big>
+  <left >
+    <h4 red>Easily Manipulated</h4>
+    <h4 red>Data Mining</h4>
+    <h1 red>Isolation</h1>
+  </right>
+</section>
+
+<section left bottom red>
+  <left >
+    <h2 red>It's Super Depressing.</h2>
+  </right>
+</section>
+
+<section left bottom orange>
+  <left >
+    <h2 no-bg invert>Connect.</h2>
+  </right>
+</section>
+
+<section left bottom green>
+  <left >
+    <h2 no-bg invert>Bond.</h2>
+  </right>
+</section>
+
+
+<section green>
+  <right>
+    <h1 no-bg invert>How to fix</h1>    
+    <!-- <marquee  invert scrollamount="10" width="100%"  height="200" direction="right" style="left: 0;" onmouseenter="this.stop()" onmouseleave="this.start()"> -->
+    <marquee  scrollamount="10" width="100%"  height="200" direction="left">
+        <img src="fix-1.webp" style="height: 20px" />
+        <img src="fix-2.webp" style="height: 20px" />
+        <img src="fix-3.webp" style="height: 20px" />
+    </marquee>
+    <h1 no-bg invert>Social Platforms</h1>
+  </right>
+</section>
+
+<section bottom left green>
+  <left>
+    <h1 no-bg invert>1.Entrepreneur</h1>
+    <h1 no-bg invert>2.Employees</h1>
+    <h1 no-bg invert>3.User</h1>
+  </left>
+</section>
+
+<section  green>
+  <h1 no-bg invert>1.Entrepreneur</h1>
+</section>
+
+<section green>
+  <h2 invert no-bg>User-growth should <u>NOT</u> be the Golden Standard.</h2>
+</section>
+
+<section green>
+  <h2 invert no-bg><u>Always</u> put the well-being of Users <u>first</u>.</h2>
+</section>
+
+<section green>
+  <h2 invert no-bg><u>Then</u> make a business model that fits.</h2>
+</section>
+
+<section green>
+  <h2 invert no-bg>No Fit = Bad Idea</h2>
+</section>
+
+<section  green>
+  <h1 no-bg invert>2.Employees</h1>
+</section>
+
+<section  green>
+  <h1 no-bg invert>You have Power.</h1>
+</section>
+
+<section  green>
+  <h1 no-bg invert>You have the Power to say <u>NO</u>!</h1>
+  <!-- Infinite Scroll -->
+</section>
+
+<section  orange>
+  <h1 no-bg invert>We're too privileged not to do it.</h1>
+  <!-- Get another job, to priviliged -->
+</section>
+
+<section green>
+  <h1 no-bg invert>3.Users</h1>
+</section>
+
+<section green>
+  <h1 no-bg invert>The power of many.</h1>
+</section>
+
+<section green>
+  <h1 no-bg invert>If it make you feel bad, <u>stop</u> using it!</h1>
+</section>
+
+<section green>
+  <h1 no-bg invert>So maybe..</h2>
+</section>
+
+<section green>
+  <h1 no-bg >👷🏼‍♀️👨🏿‍💻👨🏻‍✈️</h1>
+  <h3 no-bg invert>Well-being Advocates!</h3>
+</section>
+
+<section>
+  <h1 no-bg invert>My Solutions</h1>
+</section>
+
+<section>
+    <h2 invert no-bg>Thanks</h2>
+    <h2 invert no-bg>reimertz.co</h2>
+    <!-- please leave this here <3 -->
+    <p invert no-bg>created with lagom.js</a></p>
+</section>
+<script src="scripts/lagom.js"></script>

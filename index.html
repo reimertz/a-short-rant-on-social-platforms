@@ -54,6 +54,50 @@
   big big img[contain] {
     object-fit: contain;
   }
+  .hand {
+    position: relative;
+  }
+
+  .hand:after {
+    content: '';
+    display: block;
+    background-image: url('hand.png');
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(-20deg);
+    padding: 20px;
+    border-radius: 40px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    position: absolute;
+    bottom: -25px;
+    right: -25px;
+  }
+  
+  .hand:active:after {
+    transform: scale(0.5) rotate(-20deg);
+  }
+
+
+  .hand-video {
+    display: block;
+    background-image: url('hand.png');
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(-20deg);
+    padding: 20px;
+    border-radius: 40px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    pointer-events: none;
+  }
 </style>
 
 <section invert>
@@ -106,7 +150,7 @@
     <img id="timetravelImg" style="opacity: 0;" src="200w.webp">
   </big></big>
   <h4 id="timetravel"></h4>
-  <h2 id="timetravelButton" style="cursor: pointer;"> Time Travel</h2>
+  <h2 class="hand" id="timetravelButton" style="cursor: pointer;"> Time Travel</h2>
   
   <script type="text/javascript">
     window.doTimeTravel = (newAge = 2018) => {
@@ -188,10 +232,10 @@
   <h4 >45 million years ago</h4>
   <h3>Altruism</h3>
   <h1>
-    🐿🐿<span style="cursor: crosshair;" onmousedown="this.innerHTML='‼️'" onmouseup="this.innerHTML='💥'">🐿</span>🦅
+    🐿🐿<span style="cursor: crosshair;" class="hand" onmousedown="this.innerHTML='‼️'" onmouseup="this.innerHTML='💨💥'">🐿</span>🦅
   </h1>
   <h1>
-    <span style="cursor: crosshair;" onmousedown="this.innerHTML='🐿🐿💤'" onmouseup="this.innerHTML='💥💥💥'">🐿🐿🐿</span>
+    <span style="cursor: crosshair;" class="hand" onmousedown="this.innerHTML='🐿🐿💤'" onmouseup="this.innerHTML='💥💥💥'">🐿🐿🐿</span>
     🦅</h1>
   </h1>
 </section>
@@ -199,7 +243,7 @@
 <section white top>
   <h4>35 million years ago</h4>
   <h2>Unicorns</h2>
-  <h1 style="cursor: crosshair;" onmousedown="this.innerHTML='💥'" onmouseup="this.innerHTML='💀'">🦄</h1>
+  <h1 style="cursor: crosshair;" class="hand" onmousedown="this.innerHTML='💥'" onmouseup="this.innerHTML='💀'">🦄</h1>
 </section>
 
 <section white top>
@@ -211,7 +255,7 @@
 <section white top>
   <h4 >30 million years ago</h4>
   <h2>Fear Grin</h2>
-  <h1 style="cursor: crosshair;" 
+  <h1 class="hand" style="cursor: crosshair;" 
     onmouseenter="this.innerHTML='🙊🐅'" 
     onmousedown="this.innerHTML='🐵🐅<sup ><small>ok, we cool</small></sup>'" 
     onmouseup="this.innerHTML='🙊🐅'"
@@ -254,6 +298,7 @@
 <section left bottom>
   <big>
     <big>
+      <div class="hand-video"></div>
       <video style="opacity: 0.8;filter: transform: scale(1.5);" onmousedown="this.play()">
         <source src="first_city.mp4" type="video/mp4">
       </video>
@@ -268,7 +313,7 @@
 <section left bottom >
   <big>
     <big>
-      <video style="opacity: 0.8;filter: transform: scale(1.5);" onmousedown="this.play()">
+      <video style="opacity: 0.8;filter: transform: scale(1.5);" >
         <source src="first_city.mp4#t=60" type="video/mp4">
       </video>
     </big>
@@ -438,6 +483,7 @@
 
 <section left bottom red>
   <big><big>
+      <div class="hand-video"></div>
       <video loop onmousedown="this.play()" onmouseup="this.pause()">
       <source src="addiction_2.mp4" type="video/mp4">
     </video>
@@ -483,6 +529,7 @@
 
 <section left bottom red>
   <big><big>
+    <div class="hand-video"></div>
     <video loop onmousedown="this.play()" onmouseup="this.pause()">
       <source src="mental_health_2.mp4" type="video/mp4">
     </video>
@@ -510,9 +557,7 @@
 
 <section left bottom red>
   <big><big>
-    <big><big>
     <img src="FragrantSickAmethystinepython-max-1mb.gif" style="opacity: 0.55;filter: hue-rotate(270deg);" >
-  </big></big>
   </big></big>
   <left >
     <h4 red>Easily Manipulated</h4>
